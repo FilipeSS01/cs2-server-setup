@@ -56,7 +56,7 @@ matchzy_loadmatch_url URL
 O comando `matchzy_loadmatch_url` carrega uma partida a partir de um link (URL), onde essa URL contém os detalhes da partida no formato JSON. Esse JSON inclui informações como os nomes e jogadores das equipes, os mapas a serem jogados, os espectadores, entre outros parâmetros.
 
 ### 4. Geração do JSON via Formulário HTML
-![alt text]([/images/image.png](https://cdn.discordapp.com/attachments/753744531085852683/1286169904420225125/image.png?ex=66ecee91&is=66eb9d11&hm=0a70a9d66e6257bb62de659a5fade3c42a570a3113dedfe156ec4853df1e94a7&))
+![alt text](https://cdn.discordapp.com/attachments/753744531085852683/1286169904420225125/image.png?ex=66ecee91&is=66eb9d11&hm=0a70a9d66e6257bb62de659a5fade3c42a570a3113dedfe156ec4853df1e94a7&)
 
 A aplicação HTML serve como interface para que os dados da partida sejam inseridos manualmente. O usuário preenche o formulário com as informações dos dois times, jogadores, mapas e espectadores. O formulário coleta essas informações e, ao ser submetido, um script JavaScript transforma os dados em um JSON no formato adequado.
 
