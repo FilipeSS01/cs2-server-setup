@@ -9,7 +9,7 @@ O processo de inicialização envolve a execução de dois contêineres: um para
 #### Iniciando o contêiner do servidor CS2:
 
 ```bash
-docker run -d -p 27015:27015 -p 27020:27020 --name servidor-cs2-01 -u cs2user -it filipess01/eng-sports-cs2:1.0 /bin/bash
+docker run -d -p 27015:27015/tcp -p 27015:27015/udp -p 27020:27020/tcp -p 27020:27020/udp --name servidor-cs2-01 -u cs2user -it filipess01/eng-sports-cs2:1.0 /bin/bash
 ```
 
 - **-d**: O container é executado em segundo plano.
