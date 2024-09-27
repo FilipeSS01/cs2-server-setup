@@ -9,7 +9,7 @@ O processo de inicialização envolve a execução de dois contêineres: um para
 #### Iniciando o contêiner do servidor CS2:
 
 ```bash
-docker run -d -p 27015:27015/tcp -p 27015:27015/udp -p 27020:27020/tcp -p 27020:27020/udp --name servidor-cs2-01 -u cs2user -it filipess01/eng-sports-cs2:1.0 /bin/bash
+docker run -d -p 27015:27015 --name servidor-cs2-01 -u cs2user -it filipess01/cs2-server /bin/bash
 ```
 
 - **-d**: O container é executado em segundo plano.
@@ -38,10 +38,10 @@ Com esses dois contêineres, o servidor CS2 estará pronto para rodar partidas e
 Depois que o container está rodando, usamos o comando `docker exec` para entrar no ambiente do container e rodar o script de inicialização:
 
 ```bash
-docker exec -it servidor-cs2-01 /bin/bash -c "/home/cs2user/start_cs2_server.sh"
+docker exec -it servidor-cs2-01 /bin/bash -c "/home/cs2user/start.sh"
 ```
 
-- Esse comando executa o script `/home/cs2user/start_cs2_server.sh`, que contém as instruções para iniciar o servidor CS2 dentro do container já em execução.
+- Esse comando executa o script `/home/cs2user/start.sh`, que contém as instruções para iniciar o servidor CS2 dentro do container já em execução.
 
 Nesse ponto, o servidor CS2 está ativo e pronto para receber partidas, mas para carregar as partidas com as configurações desejadas, utilizamos o comando `matchzy_loadmatch_url`.
 
